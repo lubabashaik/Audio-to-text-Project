@@ -1,11 +1,13 @@
 import "./App.css";
-import Task from "./task";
- 
+import Task from "./random";
 
 function App() {
-  return <>
- <Task />
-  </>;
+  return (
+    <>
+      {/* <Task /> */}
+      <Task />
+    </>
+  );
 }
 
 export default App;
