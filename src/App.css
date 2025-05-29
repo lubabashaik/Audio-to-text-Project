@@ -1,0 +1,52 @@
+#img {
+  width: 30px;
+  height: 50px;
+}
+
+.mic-container {
+  border: 1px solid black;
+  border-radius: 50%;
+  padding: 6px 18px;
+  background: rgb(105, 140, 145);
+}
+
+.transcript {
+  color: rgb(13, 31, 13);
+  font-size: 20px;
+  border: 1px solid black;
+  width: 700px;
+  height: 200px;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  background: rgb(105, 140, 145);
+}
+
+.text-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.speech-container {
+  /* text-align: center; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color:rgb(105, 140, 145);
+
+}
+
+.rest{
+  background:rgb(105, 140, 145);
+  color:rgb(13, 31, 13);
+  border-radius: 10px;
+  font-size: medium;
+  padding: 6px;
+}
+
+.body{
+  background: rgba(32, 24, 24, 0.97);
+}
