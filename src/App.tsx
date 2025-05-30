@@ -1,11 +1,13 @@
 import "./App.css";
-import Task from "./random";
+
+import SpeechText from "./SpeechRecognition";
 
 function App() {
   return (
     <>
       {/* <Task /> */}
-      <Task />
+      {/* <Task /> */}
+      <SpeechText />
     </>
   );
 }

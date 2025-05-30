@@ -45,22 +45,53 @@
   background-color: #d9dbf4aa;
   border-radius: 100%;
 }
-#micImg {
-  color: white;
+
+#micimg {
   width: 30px;
+  height: 30px;
+}
+.micImg {
+  background-color: #d9dbf4aa;
+  border-radius: 100%;
+  width: 50px;
   height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #p-text {
   width: 800px;
   height: 200px;
   background-color: #d9dbf4aa;
-  border-radius: 40px;
+  border-radius: 20px;
   padding: 3px;
   color: black;
   font-size: 15px;
   font-weight: 500;
 }
 #reset-btn {
+  background-color: #d9dbf4aa;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+#startid {
+  background-color: #d9dbf4aa;
+}
+#stopid {
+  background-color: #d9dbf4aa;
+}
+#resetid {
   background-color: #d9dbf4aa;
 }
