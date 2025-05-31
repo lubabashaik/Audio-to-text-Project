@@ -1,6 +1,4 @@
-// USING JAVASCRIPT
-
-import { useState, useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import "./App.css";
 
 interface SpeechRecognitionAlternative {
@@ -53,9 +51,16 @@ interface Window {
 function Task() {
   const [listening, setListening] = useState(false);
   const [text, setText] = useState("");
+  const [chunks, setChunks] = useState<string[]>([]);
   const [error, setError] = useState<string | null>(null);
   const recognitionRef = useRef<SpeechRecognitionInstance | null>(null);
 
+  useEffect(() => {
+    if (text && !listening) {
+      setChunks((prev) => [...prev, text]);
+      setText("");
+    }
+  }, [text, listening]);
   useEffect(() => {
     const SpeechRecognition =
       (window as Window).webkitSpeechRecognition ||
@@ -127,20 +132,31 @@ function Task() {
 
   const resetHandler = () => {
     setText("");
+    setChunks([]);
   };
 
   return (
-    <div>
+    <div id="container">
       <h1>Audio To Text</h1>
+      
+      
+      <p id="p-text">
+        {chunks.join(" ")}
+        {listening && text}
+      </p>
+      {error && <p style={{ color: "red" }}>{error}</p>}
+
+      <div className="micfooter">
+              <button id="reset-btn" onClick={resetHandler}>
+        Reset
+      </button>
       <button id="buttonImg" onClick={handler}>
         <img src="mic.svg" alt="Mic" id="micImg" />
       </button>
-      <p>{listening ? "Listening...." : "Tap on Mic to Speak.."}</p>
-      <p id="p-text">{text}</p>
-      {error && <p style={{ color: "red" }}>{error}</p>}
-      <button id="reset-btn" onClick={resetHandler}>
-        Reset
-      </button>
+       
+      </div>
+      <p id="mictext">{listening ? "Listening...." : "Tap on Mic to Speak.."}</p>
+     
     </div>
   );
 }

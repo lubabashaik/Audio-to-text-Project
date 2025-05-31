@@ -45,56 +45,45 @@
   background-color: #d9dbf4aa;
   border-radius: 100%;
 }
-
-#micimg {
-  width: 40px;
-  height: 30px;
-}
-.micImg {
-  background-color: #d9dbf4aa;
-  border-radius: 100%;
-  width: 50px;
+#micImg {
+  color: white;
+  width: 30px;
   height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-#MicrophoneAlt{
-  width: 40px;
 }
 
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-#p-text {
+#p-text{
   width: 800px;
   height: 200px;
   background-color: #d9dbf4aa;
-  border-radius: 20px;
+  border-radius: 40px;
   padding: 3px;
   color: black;
   font-size: 15px;
   font-weight: 500;
+
 }
-#reset-btn {
+#reset-btn{
+  border-color: #d9dbf4aa;
   background-color: #d9dbf4aa;
 }
-
-.buttons {
+.micfooter{
   display: flex;
-  gap: 16px;
+  flex-direction: column;
+  width: 50px;
+  height: 50px;
+  justify-items: center;
+  align-items: center;
   justify-content: center;
+  margin-top: 40px;
+  gap: 20px;
+}
+#mictext{
+  margin-top: 50px;
 }
 
-#startid {
-  background-color: #d9dbf4aa;
-}
-#stopid {
-  background-color: #d9dbf4aa;
-}
-#resetid {
-  background-color: #d9dbf4aa;
+#container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
 }
