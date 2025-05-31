@@ -47,7 +47,7 @@
 }
 
 #micimg {
-  width: 30px;
+  width: 40px;
   height: 30px;
 }
 .micImg {
@@ -58,6 +58,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+#MicrophoneAlt{
+  width: 40px;
 }
 
 .container {
@@ -82,7 +85,7 @@
 
 .buttons {
   display: flex;
-  gap: 10px;
+  gap: 16px;
   justify-content: center;
 }
 
