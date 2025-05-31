@@ -1,7 +1,7 @@
+import { FaMicrophoneAlt, FaMicrophoneAltSlash } from "react-icons/fa";
 import SpeechRecognition, {
   useSpeechRecognition,
 } from "react-speech-recognition";
-import {  FaMicrophoneAlt, FaMicrophoneAltSlash } from "react-icons/fa";
 
 function SpeechText() {
   const { transcript, listening, resetTranscript } = useSpeechRecognition();
@@ -11,15 +11,10 @@ function SpeechText() {
       continuous: true,
     });
   };
-  console.log(
-    "SpeechRecognition.startListening",
-    SpeechRecognition.startListening
-  );
   return (
     <div className="container">
       <h1>Audio to Text</h1>
       <div className="buttons">
-        
         <div
           style={{ background: `${listening ? "red" : "#d9dbf4aa"}` }}
           className="micImg"
